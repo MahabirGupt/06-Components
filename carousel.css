@@ -1,0 +1,113 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR:#087f5b 
+GREY COLOR:#343a40
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  /* reset line height to 1 */
+  line-height: 1;
+}
+.carousel {
+  width: 800px;
+  margin: 100px auto; /*top and bottom is 100 px. it is centred in the middle*/
+  background-color: #087f5b;
+  border-radius: 8px;
+  padding: 32px;
+  /* to move the image away from the left */
+  padding-left: 86px;
+  /* set text color */
+  /* color: #fff; */
+  position: relative;
+  /* to display the text and image side by side */
+  display: flex;
+  /* center all the elements vertically */
+  align-items: center;
+  /* horizontal gap */
+  gap: 86px;
+}
+img {
+  height: 200px;
+  /* width will automatically be set at the same proportion */
+  border-radius: 8px;
+  /* to scale elements can use transform */
+  transform: scale(1.5);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  /* bold the font */
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #e6fcf5;
+}
+.testimonial-author {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #c3fae8;
+}
+.testimonial-job {
+  font-size: 12px;
+  color: #c3fae8;
+}
+
+/* Controls */
+.btn {
+  background-color: #fff;
+  border: none;
+  height: 40px;
+  width: 40px;
+  /* to make the chevron btn round */
+  border-radius: 50%;
+  /* take the element out of the flow of the page */
+  position: absolute;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  /* top: 50%; */
+  /* to shift the button to be exactly half-way */
+  /* transform: translate(0, -50%); */
+
+  cursor: pointer;
+  /* to centralise the chevron in the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--left {
+  /* In relation to Parent Element */
+  left: 0;
+  top: 50%;
+  /* In relation to Element itself */
+  /* to shift the button to be exactly half-way */
+  transform: translate(-50%, -50%);
+}
+
+.btn--right {
+  right: 0;
+  top: 50%;
+  /* to shift the button to be exactly half-way */
+  transform: translate(50%, -50%);
+}
+
+/* change the size of chevron right and left */
+.btn-icon {
+  height: 24px;
+  width: 24px;
+  stroke: #087f5b;
+}
