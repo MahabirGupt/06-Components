@@ -32,6 +32,8 @@ body {
   padding-left: 86px;
   /* set text color */
   /* color: #fff; */
+  padding-right: 48px;
+  /* padding: 32px 48px 32px 86px; */ /*in a clockwise direction*/
   position: relative;
   /* to display the text and image side by side */
   display: flex;
@@ -110,4 +112,29 @@ img {
   height: 24px;
   width: 24px;
   stroke: #087f5b;
+}
+
+.dots {
+  position: absolute;
+  /* move the start of the element to the middle of the parent container */
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 32px);
+
+  /* create some gap between the dots */
+  /* change it to flex */
+  display: flex;
+  gap: 12px;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border: 2px solid #087f5b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot--fill {
+  background-color: #087f5b;
 }
