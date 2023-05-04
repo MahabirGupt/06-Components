@@ -1,0 +1,87 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR:#087f5b 
+GREY COLOR:#343a40
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  /* reset line height to 1 */
+  line-height: 1;
+  /* to center the elements to the centre of the page */
+  display: flex;
+  justify-content: center;
+}
+.pagination {
+  /* change the orientation */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 200px;
+}
+.btn {
+  border: 1px solid #087f5b;
+  /* give the button height and width */
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  /* get rid of background colour */
+  background: none;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #087f5b;
+}
+.btn:hover .btn-icon {
+  stroke: #fff;
+}
+.btn-icon {
+  /* give the chevron left and right height and width */
+  height: 24px;
+  width: 24px;
+  stroke: #087f5b;
+}
+
+.page-link:link,
+.page-link:visited {
+  font-size: 18px;
+  color: #343a40;
+  text-decoration: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  /* display: inline-block; because anchor tag is an inline element and height and width does not apply */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-link:hover,
+.page-link:active,
+/* using the & selector. No space between the 2 classes */
+.page-link.page-link--current {
+  background-color: #087f5b;
+  color: #fff;
+}
+.dots {
+  color: #868e96;
+}
+
+/* .current-page {
+  background-color: #087f5b;
+  color: #fff;
+} */
