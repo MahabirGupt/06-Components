@@ -1,0 +1,89 @@
+/* always start with global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  color: #343a40;
+  font-size: 24px;
+  height: 100vh; /*sets the height of the body to be the same as the viewport*/
+  text-align: center; /*text-align gets inherited*/
+  font-weight: bold; /*font-weight will get inherited*/
+
+  /* using grid as it is 2 dimensional */
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px; /*create the width of the 1st,2nd,3rd and 4th column*/
+  grid-template-rows: 80px 1fr; /*create the height of the 1st and 2nd rows*/
+}
+nav,
+section,
+main,
+aside {
+  padding-top: 24px;
+}
+nav {
+  background-color: #343a40;
+  color: #fff;
+  grid-row: 1 / -1; /*the nav will span from the 1st to last row*/
+}
+menu {
+  background-color: #7048e8;
+  grid-column: 2 / -1; /*the menu will span from 2nd to last column*/
+  /* menu is the Parent element of button  */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px; /*padding top and bottom is 0*/
+}
+button {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #5f3dc4;
+  /* on a button we always need to remove the border and set the cursor */
+  border: none;
+  cursor: pointer;
+  /* color does not get inherited for button */
+  color: #fff;
+  padding: 8px 12px;
+
+  /* to change the position of the buttons */
+  display: inline-block;
+}
+button:last-child {
+  background-color: #d6336c;
+  /* to shift the last button, Trash right to the end of the page */
+  margin-left: auto;
+}
+section {
+  background-color: #e9ecef;
+  /* grid-column: 2 / 3; */ /*not required*/
+  padding: 40px; /*so that it is aligned with the buttons in the menu bar*/
+
+  /* How elements that don't fit into a container appear */
+  overflow: scroll; /*nothing to do with flex box*/
+
+  /* flex container of the email element is section */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 40px;
+}
+.email {
+  background-color: #adb5bd;
+  height: 96px;
+  /*because we are using flex-box*/
+  flex-shrink: 0;
+
+  /* flex-box treats texts as a flex item */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside {
+  background-color: #e9ecef;
+  /* not required */
+  /* grid-column: 4 / 5;
+  grid-row: 2 / -1; */
+}
